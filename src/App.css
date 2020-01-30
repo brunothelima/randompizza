@@ -10,22 +10,27 @@ body {
   background-color: #CCC;
   padding: 1em;
 }
-.rdpizza__pizza {
+.pizza {
   z-index: 2;
   flex: 1;
   width: 100%;
   padding: 1em;
   background-color: #AAA;
 }
-.rdpizza__pizza img {
+.pizza > img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
-.rdpizza__pizza--loading img {
-  animation: rotate 1.5s cubic-bezier(1,.01,0,.99);
+.pizza--loading > img {
+  animation: randomize 1.5s cubic-bezier(1,.01,0,.99);
 }
-.rdpizza h3 {
+.pizza__info {
+  display: flex;
+  padding-top: 1em;
+  justify-content: space-between;
+}
+h3 {
   z-index: 1;
   width: 100%;
   padding: 1em;
@@ -33,12 +38,12 @@ body {
   background-color: #BBB;
   text-align: center;
 }
-.rdpizza button {
+button {
   appearance: none;
   height: 48px;
   background-color: #AAA;
 }
-@keyframes rotate {
+@keyframes randomize {
   from { 
     transform: rotate(0deg); 
   }

@@ -1,0 +1,8 @@
+.rarity__rating {
+  display: flex;
+  align-items: center;
+}
+.rarity__rating img {
+  display: block;
+  width: 1em;
+}

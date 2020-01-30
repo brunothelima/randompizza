@@ -1,17 +1,20 @@
 import React from 'react';
 import { useState } from 'react'
-import { initial, pizzas } from './pizzas.js'
+import { pizzas } from './pizzas'
+import Stars from './Stars'
+import Calories from './Calories'
+import Rarity from './Rarity'
 import './App.css'
 
 function App() {
-  let [loading, setLoading] = useState(false)
-  let [current, setCurrent] = useState(initial)
+  let [loading, setLoading] = useState(undefined)
+  let [current, setCurrent] = useState(pizzas[0])
   /**
    * This funcion select's a random pizza from the "pizzas" stack
-   * and set the reactive variables to their new state
+   * and set the reactive variable to their new state
    */
   const randomize = () => {
-    // hurrp durr
+    // Put the app in loading state
     setLoading(true)
     // Creates a new stack of pizzas without the current selected
     const haystack = [...pizzas]
@@ -26,8 +29,13 @@ function App() {
 
   return (
     <div className="rdpizza">
-      <div className={`rdpizza__pizza ${(loading ? 'rdpizza__pizza--loading' : '')}`}>
-        <img alt="pizza" src={current.img} />
+      <div className={`pizza ${(loading ? 'pizza--loading' : '')}`}>
+        <img alt={current.name} src={current.img} />
+        <div className="pizza__info">
+         <Stars stars={current.stars} />
+         <Calories calories={current.calories} />
+         <Rarity rarity={current.rarity} />
+        </div>
       </div>
       <h3>{current.name}</h3>
       <button disabled={loading} onClick={randomize}>Randomize!</button>  

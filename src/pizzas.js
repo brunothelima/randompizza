@@ -1,15 +1,15 @@
-import initialPNG from './assets/initial.png'
-import piclesPNG from './assets/picles.png'
+import jalapenoPNG from './assets/jalapeno.png'
 import peperoniPNG from './assets/peperoni.png'
-import vegetarianPNG from './assets/vegetarian.png'
-
-export const initial = { 
-  name: 'Start Now!', 
-  img: initialPNG 
-}
+import mexicanaPNG from './assets/mexicana.png'
+// import noflavorPNG from './assets/noflavor.png'
 
 export const pizzas = [
-  { name: 'Picles', img: piclesPNG },
-  { name: 'Peperoni', img: peperoniPNG },
-  { name: 'Vegetarian', img: vegetarianPNG }
+  { name: 'Jalapeno', img: jalapenoPNG, stars: 2, calories: 3, rarity: 5 },
+  { name: 'Peperoni', img: peperoniPNG, stars: 3, calories: 5, rarity: 1 },
+  { name: 'Mexicana', img: mexicanaPNG, stars: 4, calories: 4, rarity: 3 }
 ]
+// export const mock = { 
+//   name: 'Start Now!', 
+//   img: noflavorPNG,
+//   stars: 0
+// }

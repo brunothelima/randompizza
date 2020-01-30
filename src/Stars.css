@@ -1,0 +1,8 @@
+.stars__rating {
+  display: flex;
+  align-items: center;
+}
+.stars__rating img {
+  display: block;
+  width: 1em;
+}
